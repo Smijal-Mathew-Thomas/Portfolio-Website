@@ -368,6 +368,19 @@ footer{background:linear-gradient(180deg,var(--paper),#EFEAE1);border-top:1px so
   background:linear-gradient(var(--accent),transparent);opacity:.55;animation:scrollcue 2.2s ease-in-out infinite}
 @keyframes scrollcue{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(9px);opacity:.12}}
 
+/* project card polish */
+.proj{position:relative;overflow:hidden}
+.proj::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--accent-bright),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.proj:hover::before{transform:scaleX(1)}
+.proj .ph{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}
+.proj .ph .pn{margin-bottom:0}
+.proj .pico{width:34px;height:34px;flex:none;border-radius:9px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);transition:.32s cubic-bezier(.16,1,.3,1)}
+.proj .pico svg{width:17px;height:17px}
+.proj:hover .pico{background:var(--accent);color:#fff;transform:translateY(-2px)}
+.proj .plink{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;margin-top:16px;font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;color:var(--accent);text-decoration:none;transition:.25s}
+.proj .plink svg{width:13px;height:13px;transition:.25s}
+.proj .plink:hover svg{transform:translate(2px,-2px)}
+
 @media(max-width:760px){
   .hero::after{display:none}
   .portrait-wrap::before{right:-14px}
@@ -405,8 +418,8 @@ footer{background:linear-gradient(180deg,var(--paper),#EFEAE1);border-top:1px so
         <span class="ln"><span>Smijal</span></span>
         <span class="ln"><span>Mathew Thomas</span></span>
       </h1>
-      <div class="tagline">Electronics Engineering graduate · <b>Cybersecurity for Control Systems</b> @ SAIT<br>Industrial Control Systems · SOC Operations · Network Security &amp; Protocols</div>
-      <p class="intro">I'm a cybersecurity engineer with an electronics-engineering foundation, focused on the security of <strong>industrial control systems</strong>, identity &amp; access and the networks that connect them. I've monitored live SIEM environments, built CTF challenges and graduated with honours from SAIT.</p>
+      <div class="tagline">Cybersecurity Analyst · <b>SOC, SIEM &amp; Cloud Security</b><br>Microsoft Sentinel · Splunk · QRadar · Azure · Threat Detection &amp; Incident Response</div>
+      <p class="intro">I'm a cybersecurity analyst with hands-on SOC experience in SIEM operations, threat detection and incident response across <strong>Microsoft Sentinel, Splunk and QRadar</strong>, plus a growing focus on <strong>cloud security in Azure</strong>. Electronics-engineering foundation, SAIT honours graduate and a 1st-place CTF finisher.</p>
       <div class="cta">
         <a href="#contact" class="btn pri">Get in touch</a>
         <a href="#projects" class="btn gho">View work →</a>
@@ -414,7 +427,7 @@ footer{background:linear-gradient(180deg,var(--paper),#EFEAE1);border-top:1px so
       <div class="socials">
         <a href="https://www.linkedin.com/in/smijal-mathew-thomas" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg></a>
         <a href="https://github.com/Smijal-Mathew-Thomas" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg></a>
-        <a href="mailto:smijalmathewthomass@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        <a href="/cdn-cgi/l/email-protection#3d4e5054575c51505c4955584a495552505c4e4e7d5a505c5451135e5250" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
       </div>
     </div>
     <div class="portrait-wrap">
@@ -464,7 +477,7 @@ footer{background:linear-gradient(180deg,var(--paper),#EFEAE1);border-top:1px so
         <div class="glow"></div>
         <span class="lk">Strongest area</span>
         <h3>SOC Operations &amp; SIEM</h3>
-        <div class="tags"><span>Alert Triage</span><span>Incident Monitoring</span><span>IBM QRadar</span><span>IBM AQL</span><span>Splunk</span><span>Log Analysis</span><span>Event Correlation</span><span>Escalation &amp; Reporting</span></div>
+        <div class="tags"><span>Microsoft Sentinel</span><span>KQL</span><span>Microsoft Defender XDR</span><span>IBM QRadar</span><span>AQL</span><span>Splunk</span><span>Alert Triage</span><span>Event Correlation</span><span>Incident Response</span></div>
       </div>
       <div class="cap reveal d1">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5Z"/><path d="M9 12h6M12 9v6"/></svg> ICS / OT Security</h3>
@@ -484,7 +497,7 @@ footer{background:linear-gradient(180deg,var(--paper),#EFEAE1);border-top:1px so
       <div class="cap reveal d2">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg> Scripting, Frameworks &amp; Standards</h3>
         <div class="sub">automation · compliance · methodology</div>
-        <div class="chips"><span class="chip">Python</span><span class="chip">Bash</span><span class="chip">MITRE ATT&amp;CK</span><span class="chip">NIST</span><span class="chip">ISO 27001</span><span class="chip">CIS Controls</span></div>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Bash</span><span class="chip">Terraform</span><span class="chip">MITRE ATT&amp;CK</span><span class="chip">NIST</span><span class="chip">ISO 27001</span><span class="chip">CIS Controls</span></div>
       </div>
       <div class="cap learning reveal d1" style="grid-column:1/-1">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20v-6M6 20v-3M18 20V8M3 4h18"/></svg> Currently Developing <span class="badge">Actively learning</span></h3>
@@ -566,22 +579,42 @@ footer{background:linear-gradient(180deg,var(--paper),#EFEAE1);border-top:1px so
   <div class="wrap">
     <span class="kicker reveal"><span class="n">04</span> Projects</span>
     <h2 class="head reveal d1">Hands-on <em>work.</em></h2>
-    <p class="lead reveal d2">Environments and tools I've built to practice detection, automation and offensive thinking end to end.</p>
+    <p class="lead reveal d2">Cloud SOC labs, automation tooling and detection platforms I've built to practice detection, response and offensive thinking end to end.</p>
     <div class="cards">
       <div class="proj reveal d1">
-        <div class="pn">PROJECT 01</div>
+        <div class="ph"><span class="pn">PROJECT 01</span><span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19a4.5 4.5 0 0 0 .4-8.98A6 6 0 0 0 6.3 8.6 4 4 0 0 0 7 19Z"/></svg></span></div>
+        <h3>Cloud SOC Lab — Microsoft Sentinel</h3>
+        <p>A cloud-native SOC lab in Azure built around an exposed honeypot VM, a Log Analytics workspace and Microsoft Sentinel. I wrote KQL detections for brute-force and suspicious sign-in activity, then surfaced attacker behaviour through analytics rules and live dashboards.</p>
+        <div class="stk"><span>Azure</span><span>Microsoft Sentinel</span><span>KQL</span><span>Log Analytics</span><span>Honeypot</span></div>
+      </div>
+      <div class="proj reveal d2">
+        <div class="ph"><span class="pn">PROJECT 02</span><span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="m14.5 9.5 4-4"/></svg></span></div>
+        <h3>Azure Security Posture Scanner</h3>
+        <p>A serverless posture scanner for Azure using Azure Functions, Terraform and the Azure SDK with Managed Identity and RBAC. It automates checks across storage, TLS, HTTPS and exposed NSG ports, then generates reports with remediation guidance and compliance mapping.</p>
+        <div class="stk"><span>Azure Functions</span><span>Terraform</span><span>Python</span><span>RBAC</span><span>IaC</span></div>
+        <a class="plink" href="https://github.com/smijal-mathew-thomas" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="proj reveal d3">
+        <div class="ph"><span class="pn">PROJECT 03</span><span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></svg></span></div>
+        <h3>CYBERSEC PRO — MDR Platform</h3>
+        <p>A containerized network vulnerability scanner and managed-detection platform with parallelized Nmap scans, Snort IDS/IPS, honeypots and Splunk log analysis. Built on Django and Go with Docker, using least-privilege, secret-free deployment and automated reporting.</p>
+        <div class="stk"><span>Django</span><span>Go</span><span>Docker</span><span>Snort</span><span>Splunk</span></div>
+        <a class="plink" href="https://github.com/smijal-mathew-thomas" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="proj reveal d1">
+        <div class="ph"><span class="pn">PROJECT 04</span><span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span></div>
         <h3>Security Operations Lab</h3>
-        <p>A simulated SOC environment built to rehearse the full analyst workflow, reviewing Windows, Linux, authentication and network events to surface suspicious activity, then triaging, investigating and documenting findings.</p>
+        <p>A simulated SOC environment to rehearse the full analyst workflow, reviewing Windows, Linux, authentication and network events to surface suspicious activity, then triaging, investigating and documenting findings.</p>
         <div class="stk"><span>SIEM</span><span>Log Analysis</span><span>Windows</span><span>Linux</span><span>Incident Response</span></div>
       </div>
       <div class="proj reveal d2">
-        <div class="pn">PROJECT 02</div>
+        <div class="ph"><span class="pn">PROJECT 05</span><span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M13 15h5"/></svg></span></div>
         <h3>Docker-Based Automation System</h3>
         <p>A containerized Python/Bash pipeline that makes security-assessment tasks repeatable and portable, automating host discovery, service enumeration and vulnerability checks, then generating structured reports across lab environments.</p>
         <div class="stk"><span>Docker</span><span>Python</span><span>Bash</span><span>Nmap</span><span>Automation</span></div>
       </div>
       <div class="proj reveal d3">
-        <div class="pn">PROJECT 03</div>
+        <div class="ph"><span class="pn">PROJECT 06</span><span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 22V4M5 4h12l-2.5 4 2.5 4H5"/></svg></span></div>
         <h3>CTF Challenge Design</h3>
         <p>Authored Capture-the-Flag challenges for SAIT CTF 2025 spanning web application vulnerabilities, binary exploitation and network security, designing from the attacker's perspective while balancing integrity and difficulty.</p>
         <div class="stk"><span>Web Exploitation</span><span>Binary Exploitation</span><span>Network Security</span></div>
@@ -600,7 +633,7 @@ footer{background:linear-gradient(180deg,var(--paper),#EFEAE1);border-top:1px so
         <div class="stat"><div class="n" data-count="1" data-suffix="st">0</div><div class="l">Hack the Planet CTF</div></div>
         <div class="stat"><div class="n" data-count="4" data-decimals="1">0</div><div class="l">Peak GPA (Honours)</div></div>
         <div class="stat"><div class="n" data-count="4">0</div><div class="l">CTF events placed / run</div></div>
-        <div class="stat"><div class="n" data-count="6">0</div><div class="l">Certifications &amp; credentials</div></div>
+        <div class="stat"><div class="n" data-count="7">0</div><div class="l">Certifications &amp; credentials</div></div>
       </div>
       <div class="honors reveal d2">
         <div class="honor"><div class="medal gold">★</div><div><h4>1st Place, Hack the Planet CTF</h4><p>SAIT · March 2026</p></div></div>
@@ -640,6 +673,7 @@ footer{background:linear-gradient(180deg,var(--paper),#EFEAE1);border-top:1px so
       <div class="reveal d2">
         <div class="subhead">Certifications</div>
         <div class="certs">
+          <div class="cert"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><div class="cn">CompTIA Security+</div><div class="cs prog">Exam scheduled · Jul 2026</div></div></div>
           <div class="cert"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5Z"/></svg></span><div><div class="cn">Fortinet Certified Fundamentals in Cybersecurity (FCF)</div><div class="cs">Fortinet</div></div></div>
           <div class="cert"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M8 21v-5l4-2 4 2v5"/></svg></span><div><div class="cn">SailPoint Identity Security Leader</div><div class="cs">SailPoint · Credential</div></div></div>
           <div class="cert"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><div><div class="cn">Google Cybersecurity Specialization</div><div class="cs">Google</div></div></div>
@@ -660,7 +694,7 @@ footer{background:linear-gradient(180deg,var(--paper),#EFEAE1);border-top:1px so
     <div class="contact-grid">
       <div class="cinfo reveal d1">
         <p>Open to security engineering, SOC analyst and control-systems roles and always up for a good CTF. Reach out through the form or directly below.</p>
-        <div class="cline"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><div class="lab">Email</div><a href="mailto:smijalmathewthomass@gmail.com">smijalmathewthomass@gmail.com</a></div></div>
+        <div class="cline"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><div class="lab">Email</div><a href="/cdn-cgi/l/email-protection#8cffe1e5e6ede0e1edf8e4e9fbf8e4e3e1edffffccebe1ede5e0a2efe3e1"><span class="__cf_email__" data-cfemail="6516080c0f04090804110d0012110d0a08041616250208040c094b060a08">[email&#160;protected]</span></a></div></div>
         <div class="cline"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg></span><div><div class="lab">LinkedIn</div><a href="https://www.linkedin.com/in/smijal-mathew-thomas" target="_blank" rel="noopener">in/smijal-mathew-thomas</a></div></div>
         <div class="cline"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg></span><div><div class="lab">GitHub</div><a href="https://github.com/Smijal-Mathew-Thomas" target="_blank" rel="noopener">Smijal-Mathew-Thomas</a></div></div>
       </div>
@@ -688,13 +722,13 @@ footer{background:linear-gradient(180deg,var(--paper),#EFEAE1);border-top:1px so
     <div class="fsoc">
       <a href="https://www.linkedin.com/in/smijal-mathew-thomas" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z"/></svg></a>
       <a href="https://github.com/Smijal-Mathew-Thomas" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg></a>
-      <a href="mailto:smijalmathewthomass@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a href="/cdn-cgi/l/email-protection#56253b3f3c373a3b37223e3321223e393b37252516313b373f3a7835393b" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
       <a href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg></a>
     </div>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.getElementById('yr').textContent='© '+new Date().getFullYear()+' · Built with a first-principles approach';
 
 const nav=document.getElementById('nav'),prog=document.getElementById('prog');
